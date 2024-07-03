@@ -334,12 +334,13 @@ if [ "$(whoami)" == "root" ]; then
 			fn_ansi_loader
 			check_root.sh
 		fi
-	# else
-		# if [ "${userinput}" != "install" ] && [ "${userinput}" != "auto-install" ] && [ "${userinput}" != "i" ] && [ "${userinput}" != "ai" ]; then
-		# 	echo -e "[ FAIL ] Do NOT run as root!"
-		# 	exit 1
-		# fi
-	# fi
+	else
+		if [ "${userinput}" != "install" ] && [ "${userinput}" != "auto-install" ] && [ "${userinput}" != "i" ] && [ "${userinput}" != "ai" ]; then
+			# echo -e "[ FAIL ] Do NOT run as root!"
+   			echo -e "Running as root..."
+			# exit 1
+		fi
+	fi
 fi
 
 # LinuxGSM installer mode.
