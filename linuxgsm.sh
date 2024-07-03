@@ -335,10 +335,10 @@ if [ "$(whoami)" == "root" ]; then
 			check_root.sh
 		fi
 	else
-		if [ "${userinput}" != "install" ] && [ "${userinput}" != "auto-install" ] && [ "${userinput}" != "i" ] && [ "${userinput}" != "ai" ]; then
-			echo -e "[ FAIL ] Do NOT run as root!"
-			exit 1
-		fi
+		# if [ "${userinput}" != "install" ] && [ "${userinput}" != "auto-install" ] && [ "${userinput}" != "i" ] && [ "${userinput}" != "ai" ]; then
+		# 	echo -e "[ FAIL ] Do NOT run as root!"
+		# 	exit 1
+		# fi
 	fi
 fi
 
