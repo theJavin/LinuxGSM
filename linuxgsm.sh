@@ -310,6 +310,7 @@ fn_install_file() {
 	# 	done
 	# 	local_filename="${local_filename}-${i}"
 	# fi
+ 	local_filename="${local_filename}"
 	cp -R "${selfname}" "${local_filename}"
 	sed -i -e "s/shortname=\"core\"/shortname=\"${shortname}\"/g" "${local_filename}"
 	sed -i -e "s/gameservername=\"core\"/gameservername=\"${gameservername}\"/g" "${local_filename}"
