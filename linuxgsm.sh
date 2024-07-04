@@ -303,13 +303,13 @@ fn_install_getopt() {
 
 fn_install_file() {
 	local_filename="${gameservername}"
-	if [ -e "${local_filename}" ]; then
-		i=2
-		while [ -e "${local_filename}-${i}" ]; do
-			((i++))
-		done
-		local_filename="${local_filename}-${i}"
-	fi
+	# if [ -e "${local_filename}" ]; then
+	# 	i=2
+	# 	while [ -e "${local_filename}-${i}" ]; do
+	# 		((i++))
+	# 	done
+	# 	local_filename="${local_filename}-${i}"
+	# fi
 	cp -R "${selfname}" "${local_filename}"
 	sed -i -e "s/shortname=\"core\"/shortname=\"${shortname}\"/g" "${local_filename}"
 	sed -i -e "s/gameservername=\"core\"/gameservername=\"${gameservername}\"/g" "${local_filename}"
